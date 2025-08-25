@@ -1,0 +1,39 @@
+@import url("./normalize.css");
+@import url("./index_styles.css");
+
+:root {
+        --red-color: #B11A21;
+        --blue-color: #114B3D;
+        --lime-color: #989d3e;
+        --white-color: #EFE6D9;
+        --dark-color: #111113;
+}
+
+body {
+        font-family: 'Koh Santepheap', cursive;
+        background-color: var(--white-color);
+        color: var(--dark-color);
+}
+
+.container {
+        width: 100%;
+        max-width: 743px;
+        margin: 0 auto;
+        padding: 0 clamp(15px, 5%, 20px);
+        box-sizing: border-box;
+        transition: padding 0.3s ease, max-width 0.3s ease;
+        border: 1pa dotted yellow;
+}
+
+@media (min-width: 744px) and (max-width: 1199px) {
+        .container {
+                max-width: 1199px;
+                padding: 0 20px;
+        }
+}
+
+@media (min-width: 1200px) {
+        .container {
+                max-width: 1200px;
+        }
+}

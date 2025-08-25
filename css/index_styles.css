@@ -1,0 +1,149 @@
+.header {
+        background-color: var(--dark-color);
+        width: 100%;
+        height: 600px
+}
+
+.hero {
+        background-image:
+                image-set(radial-gradient(circle at center, var(--lime-color) 0%, var(--dark-color) 100%) 1x,
+                        url("../img/joker1x.webp") 1x,
+                        url("../img/joker2x.webp") 2x);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 600px;
+}
+
+.header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+}
+
+.logo-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        transition: all 0.3s ease;
+}
+
+.logo-wrapper:hover>p {
+        cursor: pointer;
+        color: var(--red-color);
+        transition: all 0.3s ease;
+}
+
+.logo-text {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--lime-color);
+        margin: 0;
+        transition: all 0.3s ease;
+}
+
+.common-nav {
+        display: none;
+}
+
+.common-nav-list {
+        display: flex;
+        gap: 18px;
+        flex-direction: row;
+}
+
+.common-nav-item {
+        font-size: 16px;
+        color: var(--blue-color);
+        cursor: pointer;
+        background-color: var(--white-color);
+        padding: 8px 16px;
+        border-radius: 16px;
+        transition: all 0.3s ease, color 0.3s ease
+}
+
+.common-nav-link {
+        color: var(--blue-color);
+        transition: all 0.3s ease;
+}
+
+
+.common-nav-item:hover {
+        background-color: var(--red-color);
+        color: var(--white-color);
+        transition: all 0.3s ease;
+}
+
+.common-nav-item:hover>a {
+        color: var(--white-color);
+        transition: all 0.3s ease;
+}
+
+.hero-text {
+        color: var(--white-color);
+        font-size: 32px;
+        text-align: center;
+        margin: 420px auto 0px;
+        max-width: 470px;
+}
+
+.hero-text-link {
+        color: var(--lime-color);
+        transition: all 0.3s ease;
+}
+
+.hero-text-link:hover {
+        color: var(--red-color);
+        transition: all 0.3s ease;
+}
+
+.roles-text {
+        display: none;
+}
+
+@media (min-width: 744px) and (max-width: 1199px) {
+        .common-nav {
+                display: block;
+        }
+
+        .hero-text {
+                color: var(--white-color);
+                font-size: 32px;
+                text-align: left;
+                margin: 160px auto 0px 0px;
+                max-width: 420px;
+                width: 320px;
+        }
+
+        .roles-text {
+                display: block;
+                color: var(--white-color);
+                font-size: 32px;
+                text-align: right;
+                margin: 16px 0px 0px auto;
+                max-width: 470px;
+                width: 320px;
+        }
+}
+
+@media (min-width: 1200px) {
+        .common-nav {
+                display: block;
+        }
+
+        .hero-text {
+                display: block;
+                text-align: left;
+                margin: 160px auto 0px 64px;
+                max-width: 470px;
+                width: 320px;
+        }
+
+        .roles-text {
+                display: block;
+                text-align: right;
+                margin: 16px 64px 0px auto;
+                max-width: 470px;
+                width: 320px;
+        }
+}
