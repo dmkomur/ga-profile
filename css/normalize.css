@@ -380,6 +380,8 @@ template {
 
 ul {
         list-style-type: none;
+        margin: 0;
+        padding: 0;
         /* Removes the bullet points */
 }
 
@@ -387,4 +389,9 @@ a:link,
 a:visited,
 a:active {
         text-decoration: none;
+}
+
+p {
+        margin: 0;
+        /* Resets all four margins (top, right, bottom, left) to zero */
 }

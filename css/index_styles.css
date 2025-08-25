@@ -1,3 +1,5 @@
+/* header hero */
+
 .header {
         background-color: var(--dark-color);
         width: 100%;
@@ -50,6 +52,7 @@
         display: flex;
         gap: 18px;
         flex-direction: row;
+        padding-top: 8px;
 }
 
 .common-nav-item {
@@ -101,6 +104,73 @@
         display: none;
 }
 
+/* main section */
+
+.rules {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+}
+
+.rules-decoration {
+        background-image: url("../img/peak.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 290px;
+        height: 348px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+}
+
+.rules-decoration-text {
+        color: var(--lime-color);
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 150px;
+}
+
+.mobile-nav {
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+}
+
+.mobile-nav-list {
+        display: flex;
+        gap: 16px;
+        flex-direction: row;
+        margin: 0 auto;
+}
+
+.mobile-nav-item {
+        font-size: 16px;
+        color: var(--white-color);
+        cursor: pointer;
+        background-color: var(--blue-color);
+        padding: 8px 16px;
+        border-radius: 16px;
+        transition: all 0.3s ease, color 0.3s ease;
+        box-shadow: 2px 2px 2px var(--dark-color)
+}
+
+.mobile-nav-link {
+        color: var(--white-color);
+        transition: all 0.3s ease;
+}
+
+.mobile-nav-item:hover {
+        background-color: var(--red-color);
+        color: var(--white-color);
+        transition: all 0.3s ease;
+}
+
 @media (min-width: 744px) and (max-width: 1199px) {
         .common-nav {
                 display: block;
@@ -124,9 +194,28 @@
                 max-width: 470px;
                 width: 320px;
         }
+
+        .mobile-nav {
+                display: none;
+        }
+
+        .rules-decoration {
+                width: 409px;
+                height: 487px;
+
+        }
+
+        .rules-decoration-text {
+                font-size: 32px;
+                max-width: 186px;
+        }
 }
 
 @media (min-width: 1200px) {
+        .mobile-nav {
+                display: none;
+        }
+
         .common-nav {
                 display: block;
         }
@@ -145,5 +234,16 @@
                 margin: 16px 64px 0px auto;
                 max-width: 470px;
                 width: 320px;
+        }
+
+        .rules-decoration {
+                width: 409px;
+                height: 487px;
+
+        }
+
+        .rules-decoration-text {
+                font-size: 32px;
+                max-width: 186px;
         }
 }
