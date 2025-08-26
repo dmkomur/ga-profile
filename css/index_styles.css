@@ -133,6 +133,8 @@
         text-align: center;
         margin: 0 auto;
         max-width: 150px;
+        animation: shake 1s infinite;
+        text-shadow: 2px 2px var(--red-color), -2px -2px #1cbea9;
 }
 
 .mobile-nav {
@@ -157,7 +159,7 @@
         padding: 8px 16px;
         border-radius: 16px;
         transition: all 0.3s ease, color 0.3s ease;
-        box-shadow: 2px 2px 2px var(--dark-color)
+        box-shadow: 1px 1px 4px var(--dark-color)
 }
 
 .mobile-nav-link {
@@ -170,6 +172,13 @@
         color: var(--white-color);
         transition: all 0.3s ease;
 }
+
+.rules-item {
+        color: var(--blue-color);
+        font-size: 28px;
+}
+
+/* tablet styles */
 
 @media (min-width: 744px) and (max-width: 1199px) {
         .common-nav {
@@ -211,6 +220,8 @@
         }
 }
 
+/* desktop styles */
+
 @media (min-width: 1200px) {
         .mobile-nav {
                 display: none;
@@ -245,5 +256,31 @@
         .rules-decoration-text {
                 font-size: 32px;
                 max-width: 186px;
+        }
+}
+
+@keyframes shake {
+        0% {
+                transform: translate(0, 0) rotate(0deg);
+        }
+
+        20% {
+                transform: translate(-1px, 1px) rotate(-1deg);
+        }
+
+        40% {
+                transform: translate(-1px, -1px) rotate(1deg);
+        }
+
+        60% {
+                transform: translate(1px, 1px) rotate(0deg);
+        }
+
+        80% {
+                transform: translate(1px, -1px) rotate(1deg);
+        }
+
+        100% {
+                transform: translate(0, 0) rotate(-1deg);
         }
 }
