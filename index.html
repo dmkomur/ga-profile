@@ -10,6 +10,11 @@
             sizes="any"
             type="image/svg+xml"
         />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+
         <link rel="stylesheet" href="./css/styles.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,11 +53,24 @@
                             </ul>
                         </nav>
                     </div>
-                    <p class="hero-text story-text">
+                    <p
+                        class="hero-text story-text"
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="bottom-bottom"
+                        data-aos-delay="300"
+                        data-aos-duration="1000"
+                    >
                         My name is Joker. And i will tell
                         <a class="hero-text-link" href="#">my story</a>
                     </p>
-                    <p class="hero-text roles-text">
+                    <p
+                        class="hero-text roles-text"
+                        class="hero-text story-text"
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="bottom-bottom"
+                        data-aos-delay="600"
+                        data-aos-duration="1200"
+                    >
                         I play many roles and what I
                         <a class="hero-text-link" href="#">love most</a> in the
                         world
@@ -102,7 +120,32 @@
                     </li>
                 </ul>
             </section>
+            <section class="show">
+                <p
+                    class="show-text"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom"
+                    data-aos-delay="300"
+                    data-aos-duration="2000"
+                >
+                    if you see me...
+                </p>
+                <h2
+                    class="show-header"
+                    class="show-text"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom"
+                    data-aos-delay="500"
+                    data-aos-duration="2000"
+                >
+                    ...so the show has already begun
+                </h2>
+            </section>
         </main>
         <footer class="footer"></footer>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
