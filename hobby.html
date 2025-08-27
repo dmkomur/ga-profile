@@ -107,13 +107,13 @@
                         />
                     </a>
                     <a
-                        href="./img/csr_big.webp"
+                        href="./img/mask_big.webp"
                         data-pswp-width="1440"
                         data-pswp-height="960"
                     >
                         <img
-                            src="./img/car_small.webp"
-                            alt="Joker in car"
+                            src="./img/mask_small.webp"
+                            alt="Joker in mask"
                             class="gallery-item"
                             width="290"
                             height="435"
@@ -172,10 +172,9 @@
             </div>
         </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.umd.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.umd.min.js"></script>
+        <script type="module">
+            import PhotoSwipeLightbox from "https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.esm.js";
 
-        <script>
             const lightbox = new PhotoSwipeLightbox({
                 gallery: "#my-gallery",
                 children: "a",
