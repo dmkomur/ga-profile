@@ -219,6 +219,7 @@
         justify-content: space-between;
 }
 
+
 .show-text {
         color: var(--white-color);
         font-size: 24px;
@@ -240,6 +241,43 @@
         height: 400px;
         margin: 0 auto;
         background-color: var(--dark-color);
+        display: flex;
+        padding: 0 16px;
+        justify-content: center;
+        gap: 36px;
+        flex-direction: column;
+}
+
+.footer-header {
+        font-size: 20px;
+        color: var(--lime-color);
+}
+
+.footer-header::after {
+        content: "";
+        display: block;
+        width: 56px;
+        height: 1px;
+        background: var(--violet-color);
+        margin-top: 8px;
+}
+
+.footer-links-list {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        flex-direction: column;
+}
+
+.footer-links-link {
+        font-size: 16px;
+        color: var(--white-color);
+        transition: all 0.3s ease;
+}
+
+.footer-links-link:hover {
+        color: var(--red-color);
+        transition: all 0.3s ease;
 }
 
 /* tablet styles */
