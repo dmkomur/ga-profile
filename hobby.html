@@ -12,7 +12,7 @@
         />
         <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css"
+            href="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.css"
         />
 
         <link rel="stylesheet" href="./css/styles.css" />
@@ -40,7 +40,9 @@
                     <nav class="common-nav">
                         <ul class="common-nav-list">
                             <li class="common-nav-item">
-                                <a class="common-nav-link" href="#">hobby</a>
+                                <a class="common-nav-link" href="index.html"
+                                    >home</a
+                                >
                             </li>
                             <li class="common-nav-item">
                                 <a class="common-nav-link" href="about.html"
@@ -92,46 +94,38 @@
                         is not what I do—it’s who I am.
                     </p>
                 </div>
-                <div class="gallery" id="my-gallery">
-                    <a
-                        href="./img/csr_big.webp"
-                        data-pswp-width="1440"
-                        data-pswp-height="960"
-                    >
-                        <img
-                            src="./img/car_small.webp"
-                            alt="Joker in car"
-                            class="gallery-item"
-                            width="290"
-                            height="435"
-                        />
-                    </a>
-                    <a
-                        href="./img/mask_big.webp"
-                        data-pswp-width="1440"
-                        data-pswp-height="960"
-                    >
-                        <img
-                            src="./img/mask_small.webp"
-                            alt="Joker in mask"
-                            class="gallery-item"
-                            width="290"
-                            height="435"
-                        />
-                    </a>
-                    <a
-                        href="./img/csr_big.webp"
-                        data-pswp-width="1440"
-                        data-pswp-height="960"
-                    >
-                        <img
-                            src="./img/car_small.webp"
-                            alt="Joker in car"
-                            class="gallery-item"
-                            width="290"
-                            height="435"
-                        />
-                    </a>
+                <div>
+                    <h2 class="hobby-header">Gallery</h2>
+                    <p class="hobby-text">
+                        When your stage is the whole world, you don’t need to
+                        announce yourself twice.
+                    </p>
+                </div>
+                <div class="gallery">
+                    <img
+                        src="./img/car_small.webp"
+                        class="gallery-item"
+                        data-large="./img/car_big.webp"
+                        alt="Car"
+                    />
+                    <img
+                        src="./img/mask_small.webp"
+                        class="gallery-item"
+                        data-large="./img/mask_big.webp"
+                        alt="Car"
+                    />
+                    <img
+                        src="./img/batman_small.webp"
+                        class="gallery-item"
+                        data-large="./img/batman_big.webp"
+                        alt="Car"
+                    />
+                    <img
+                        src="./img/harley_small.webp"
+                        class="gallery-item"
+                        data-large="./img/harley_big.webp"
+                        alt="Car"
+                    />
                 </div>
             </section>
         </main>
@@ -171,16 +165,16 @@
                 </div>
             </div>
         </footer>
-
-        <script type="module">
-            import PhotoSwipeLightbox from "https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.esm.js";
-
-            const lightbox = new PhotoSwipeLightbox({
-                gallery: "#my-gallery",
-                children: "a",
-                showHideAnimationType: "zoom",
+        <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.js"></script>
+        <script>
+            document.querySelectorAll("img").forEach((img) => {
+                img.onclick = () => {
+                    const instance = basicLightbox.create(
+                        `<img src="${img.dataset.large}" alt="Large Image">`
+                    );
+                    instance.show();
+                };
             });
-            lightbox.init();
         </script>
     </body>
 </html>
