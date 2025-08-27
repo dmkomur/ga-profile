@@ -1,0 +1,67 @@
+.hobby {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin: 24px 0;
+}
+
+.hobby-header {
+        color: var(--violet-color);
+        font-size: 20px;
+        margin-bottom: 8px;
+}
+
+.hobby-text {
+        color: var(--blue-color);
+        font-size: 16px;
+}
+
+.gallery {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+}
+
+.gallery-item {
+        display: block;
+        transition: transform 0.3s;
+        border-radius: 12px;
+        height: auto;
+        width: 290px
+}
+
+.gallery-item:hover {
+        transform: scale(1.03);
+}
+
+@media (min-width: 744px) and (max-width: 1199px) {
+        .hobby {
+                margin: 28px 0;
+
+        }
+
+        .hobby-header {
+                font-size: 22px;
+        }
+
+        .hobby-text {
+                font-size: 18px;
+        }
+
+}
+
+@media (min-width: 1200px) {
+        .hobby {
+                margin: 32px 0;
+        }
+
+        .hobby-header {
+                font-size: 24px;
+        }
+
+        .hobby-text {
+                font-size: 20px;
+        }
+}

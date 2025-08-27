@@ -1,6 +1,7 @@
 @import url("./normalize.css");
 @import url("./index_styles.css");
 @import url("./about_styles.css");
+@import url("./hobby_styles.css");
 
 :root {
         --red-color: #B11A21;

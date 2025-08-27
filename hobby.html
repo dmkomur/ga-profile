@@ -6,13 +6,13 @@
         <title>hobby/Joker</title>
         <link
             rel="icon"
-            href="imag/peak.svg"
+            href="img/crown.svg"
             sizes="any"
             type="image/svg+xml"
         />
         <link
-            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
             rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css"
         />
 
         <link rel="stylesheet" href="./css/styles.css" />
@@ -52,6 +52,89 @@
                 </div>
             </div>
         </header>
+        <main class="container">
+            <section class="hobby">
+                <div>
+                    <h2 class="hobby-header">Hobby</h2>
+                    <p class="hobby-text">
+                        My hobby? Ha! Hobby is such a tiny, fragile word for
+                        something so… magnificent. I don’t just “pass the time,”
+                        oh no—I perform. Life itself is my theater, the streets
+                        my stage, the city my audience. Every interaction is a
+                        scene, every smile a mask, every scream a standing
+                        ovation. I adore the carnival of chaos, the masquerade
+                        of madness, the twisted little games people play with
+                        each other but never admit. And me? I make those games
+                        bigger, bloodier, louder, funnier. I play with human
+                        emotions the way a maestro plays with violins—sometimes
+                        sweet, sometimes screaming. I can be the actor, I can be
+                        the director, I can even be the audience, clapping as
+                        the world tears itself apart. Villains, clowns, liars,
+                        broken souls—they’re my fellow performers, my castmates
+                        in this eternal black comedy. This hobby excites me,
+                        ignites me, thrills me… but the best trick of all is
+                        weaving it seamlessly into life itself. Because when a
+                        person plays, when they truly give themselves to the
+                        game—they are free. Free in ANARCHY.
+                    </p>
+                </div>
+                <div>
+                    <h2 class="hobby-header">Anarchy</h2>
+                    <p class="hobby-text">
+                        Ah, but anarchy… that’s no hobby, darling. That’s more
+                        than a pastime, more than a trick—it’s a heartbeat.
+                        Anarchy is style, it’s breath, it’s blood. It is the
+                        glorious tearing down of walls, the sweet release of
+                        rules turned to rubble. People cling to order like a
+                        child to a toy, but I… I smash it and laugh. In anarchy,
+                        there are no chains, no masters, no scripts. Only raw
+                        freedom, only pure chaos, only life unfiltered. Anarchy
+                        is not what I do—it’s who I am.
+                    </p>
+                </div>
+                <div class="gallery" id="my-gallery">
+                    <a
+                        href="./img/csr_big.webp"
+                        data-pswp-width="1440"
+                        data-pswp-height="960"
+                    >
+                        <img
+                            src="./img/car_small.webp"
+                            alt="Joker in car"
+                            class="gallery-item"
+                            width="290"
+                            height="435"
+                        />
+                    </a>
+                    <a
+                        href="./img/csr_big.webp"
+                        data-pswp-width="1440"
+                        data-pswp-height="960"
+                    >
+                        <img
+                            src="./img/car_small.webp"
+                            alt="Joker in car"
+                            class="gallery-item"
+                            width="290"
+                            height="435"
+                        />
+                    </a>
+                    <a
+                        href="./img/csr_big.webp"
+                        data-pswp-width="1440"
+                        data-pswp-height="960"
+                    >
+                        <img
+                            src="./img/car_small.webp"
+                            alt="Joker in car"
+                            class="gallery-item"
+                            width="290"
+                            height="435"
+                        />
+                    </a>
+                </div>
+            </section>
+        </main>
         <footer class="footer">
             <div class="container">
                 <div class="footer-wrapper">
@@ -88,9 +171,17 @@
                 </div>
             </div>
         </footer>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.umd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.umd.min.js"></script>
+
         <script>
-            AOS.init();
+            const lightbox = new PhotoSwipeLightbox({
+                gallery: "#my-gallery",
+                children: "a",
+                showHideAnimationType: "zoom",
+            });
+            lightbox.init();
         </script>
     </body>
 </html>
