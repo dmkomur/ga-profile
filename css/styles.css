@@ -1,5 +1,6 @@
 @import url("./normalize.css");
 @import url("./index_styles.css");
+@import url("./about_styles.css");
 
 :root {
         --red-color: #B11A21;
@@ -24,6 +25,7 @@ body {
         box-sizing: border-box;
         transition: padding 0.3s ease, max-width 0.3s ease;
         border: 1pa dotted yellow;
+        height: 100%;
 }
 
 @media (min-width: 744px) and (max-width: 1199px) {

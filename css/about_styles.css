@@ -1,0 +1,48 @@
+.header-small {
+        background-color: var(--dark-color);
+        width: 100%;
+        padding-bottom: 8px;
+        margin-bottom: 24px;
+}
+
+.main-about {
+        height: 100vh;
+        margin: 0;
+        background-image: image-set(url("../img/face1x.webp") 1x,
+                        url("../img/face2x.webp") 2x);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        overflow-x: hidden;
+        color: var(--white-color)
+}
+
+.about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 32px;
+}
+
+.about-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background-color: rgba(47, 90, 98, 0.3);
+        padding: 12px 24px;
+        border-radius: 12px;
+
+}
+
+@media (min-width: 744px) and (max-width: 1199px) {
+        .header-small {
+                margin-bottom: 32px;
+        }
+}
+
+@media (min-width: 1200px) {
+        .header-small {
+                margin-bottom: 36px;
+        }
+}
